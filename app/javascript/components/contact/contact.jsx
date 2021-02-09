@@ -23,16 +23,16 @@ class Contact extends Component {
       phone: phone,
       message: message,
     };
-    // emailjs
-    //   .send(
-    //     'service_oj6ecd1',
-    //     'template_wb5x5je',
-    //     templateParams,
-    //     'user_vTT2nk4pHgmYk78U5flbL'
-    //   )
-    //   .then(result => {
-    //     console.log(result);
-    //   });
+    emailjs
+      .send(
+        'service_oj6ecd1',
+        'template_wb5x5je',
+        templateParams,
+        'user_vTT2nk4pHgmYk78U5flbL'
+      )
+      .then(result => {
+        console.log(result);
+      });
     this.resetForm();
   }
   resetForm() {
