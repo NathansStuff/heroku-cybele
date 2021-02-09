@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-\import axios from 'axios';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
