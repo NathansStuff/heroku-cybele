@@ -23,7 +23,7 @@ const SearchPage = ({ currentUser }) => {
       .then(resp => {
         setAnimals(resp.data.data);
         console.log(currentUser);
-        console.log('current user ^^^^')
+        console.log('current user ^^^^');
       })
       .catch(resp => console.log(resp), [animals.length]);
   }, []);
@@ -174,11 +174,13 @@ const SearchPage = ({ currentUser }) => {
                 ></input>
               </span>
             </div>
-            <NewAnimalForm>
-              {' '}
-              open={open} handleClose={handleClose} handleChange={handleChange}{' '}
-              handleSubmit={handleSubmit} handleFile={handleFile}{' '}
-            </NewAnimalForm>
+            <NewAnimalForm
+              open={open}
+              handleClose={handleClose}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              handleFile={handleFile}
+            />
             <div className='row ml-3 container-fluid row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 text-white'>
               {list}
             </div>
