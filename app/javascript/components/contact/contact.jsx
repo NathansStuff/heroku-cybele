@@ -41,6 +41,7 @@ class Contact extends Component {
       email: '',
       subject: '',
       message: '',
+      phone: '',
     });
   }
 
@@ -107,9 +108,3 @@ class Contact extends Component {
   }
 }
 export default Contact;
-
-/*
-              <Button className='form-group'>
-                <input type='submit' name='btnSubmit' className='btnContact' />
-              </Button>
-              */
