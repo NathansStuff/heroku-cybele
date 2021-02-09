@@ -34,7 +34,7 @@ const DailyUpdateForm = props => {
             value={props.daily_update.ate_food}
             id='ate_food'
           ></input>
-          <label className='form-check-label'>Ate Food</label>
+          <label className='form-check-label'>'''                       Ate Food</label>
         </div>
         
         <div className='form-check'>
@@ -45,7 +45,7 @@ const DailyUpdateForm = props => {
             value={props.daily_update.drank_water}
             id='drank_water'
           ></input>
-          <label className='form-check-label'>Drank Water</label>
+          <label className='form-check-label'>'''                       Drank Water</label>
         </div>
         <div className='form-group'>
           <br></br>
