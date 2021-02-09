@@ -6,6 +6,7 @@ import SearchPage from '../pages/search/search';
 import SignInAndSignUp from '../pages/sign-in-and-sign-up/sign-in-and-sign-up';
 import { auth, createUserProfileDocument } from '../firebase/firebase';
 import NavBar from '../components/navbar/navbar';
+import { useHistory } from 'react-router-dom';
 
 export default class App extends Component {
   constructor() {
@@ -13,32 +14,33 @@ export default class App extends Component {
 
     this.state = {
       currentUser: null,
+      userAuth: null,
     };
   }
 
-  ubsubscribeFromAuth = null;
+  unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.ubsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
-
         userRef.onSnapshot(snapShot => {
           this.setState({
             currentUser: {
               id: snapShot.id,
               ...snapShot.data(),
             },
+            userAuth: userAuth,
           });
         });
-      } else {
-        this.setState({ currentUser: userAuth });
       }
     });
   }
 
   componentWillUnsubscribe() {
     this.unsubscribeFromAuth();
+    let history = useHistory();
+    history.push('/');
   }
 
   render() {
@@ -51,19 +53,38 @@ export default class App extends Component {
               <Route exact path='/'>
                 <HomePage />
               </Route>
-              <Route exact path='/animal/:id' component={Animal} />
-              <Route
-                exact
-                path='/search'
-                component={SearchPage}
-                currentUser={this.state.currentUser}
-              />
-              <Route
-                exact
-                path='/signin'
-                component={SignInAndSignUp}
-                currentUser={this.state.currentUser}
-              />
+              {this.state.currentUser ? (
+                <Fragment>
+                  <Route
+                    exact
+                    path='/search'
+                    component={() => (
+                      <SearchPage
+                        displayName={this.state.currentUser.displayName}
+                        photoUrl={this.state.userAuth.photoURL}
+                        email={this.state.userAuth.email}
+                      />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path='/signin'
+                    component={() => (
+                      <SignInAndSignUp currentUser={this.state.currentUser} />
+                    )}
+                  />
+                  <Route exact path='/animal/:id' component={Animal} />
+                </Fragment>
+              ) : (
+                <Fragment>
+                  <Route
+                    exact
+                    path='/signin'
+                    component={SignInAndSignUp}
+                    currentUser={this.state.currentUser}
+                  />
+                </Fragment>
+              )}
             </Switch>
           </BrowserRouter>
         </Fragment>
