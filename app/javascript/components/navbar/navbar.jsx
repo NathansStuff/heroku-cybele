@@ -2,8 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import logo from '../../../assets/images/logo.svg';
+import logo from 'images/logo.svg';
 import { auth } from '../../firebase/firebase';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Styles = {
   navBackground: {
@@ -12,6 +14,12 @@ const Styles = {
 };
 
 const NavBar = ({ currentUser }) => {
+  let history = useHistory();
+
+  const HomeLink = e => {
+    e.preventDefault();
+    history.push('/');
+  };
   return (
     <React.Fragment>
       <nav
@@ -42,22 +50,25 @@ const NavBar = ({ currentUser }) => {
           </button>
           <div className='collapse navbar-collapse' id='navbarResponsive'>
             <ul className='navbar-nav ml-auto'>
-              <li className='nav-item '>
-                <a className='nav-link' href='#'>
+              <li className='nav-item pl-2'>
+                <a
+                  className='nav-link'
+                  href='/'
+                  onClick={() => history.push('/')}
+                >
                   Home
-                  <span className='sr-only'>(current)</span>
-                </a>
-              </li>
-              <li className='nav-item '>
-                <a className='nav-link' href='#'>
-                  About
                 </a>
               </li>
               <li className='nav-item pl-2'>
-                <a className='nav-link' href='#'>
-                  Contact
+                <a
+                  className='nav-link'
+                  href='/search'
+                  onClick={() => history.push('/search')}
+                >
+                  Animals
                 </a>
               </li>
+
               {currentUser ? (
                 <li className='nav-item pl-2'>
                   <a
@@ -71,8 +82,10 @@ const NavBar = ({ currentUser }) => {
                 <li className='nav-item pl-2'>
                   <a
                     className='btn rounded-pill shadow-sm text-light bg-info login'
+                    href='/signin'
+                    onClick={() => history.push('/signin')}
                   >
-                    Login
+                    Login/Signup
                   </a>
                 </li>
               )}
