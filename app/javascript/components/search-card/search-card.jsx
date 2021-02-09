@@ -1,5 +1,4 @@
 import React from 'react';
-import './search-card.scss';
 import { useHistory } from 'react-router-dom';
 
 const SearchCard = props => {

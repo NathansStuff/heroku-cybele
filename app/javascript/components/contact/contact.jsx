@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './contact.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';

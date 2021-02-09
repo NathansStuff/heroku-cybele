@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import './navbar.scss';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import logo from '../../../assets/images/logo.svg';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import { Modal } from 'react';
 import { auth } from '../../firebase/firebase';
 
 const Styles = {

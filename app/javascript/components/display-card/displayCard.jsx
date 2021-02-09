@@ -1,5 +1,4 @@
 import React from 'react';
-import './displayCard.scss';
 
 // Returns variables from props
 // Done here because page loads before page fetches api data so will throw errors due to null references

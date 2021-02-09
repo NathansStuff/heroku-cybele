@@ -3,7 +3,6 @@ import axios from 'axios';
 import DisplayCard from '../../components/display-card/displayCard';
 import DailyUpdateForm from '../../components/daily-update-form/daily-update-form';
 import DailyHistory from '../../components/daily-history/daily-history';
-import './animal.css';
 import { useHistory } from 'react-router-dom';
 import EditAnimalForm from '../../components/edit-animal-form/edit-animal-form';
 import config from '../../aws/config';

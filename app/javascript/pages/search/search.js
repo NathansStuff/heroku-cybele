@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import './search.scss';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchCard from '../../components/search-card/search-card';
 import NewAnimalForm from '../../components/new-animal-form/new-animal-form';

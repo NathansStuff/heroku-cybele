@@ -1,5 +1,4 @@
 import React from 'react';
-import './daily-update-form.scss';
 
 const DailyUpdateForm = props => {
   console.log(props);

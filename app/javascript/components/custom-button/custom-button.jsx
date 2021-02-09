@@ -1,4 +1,3 @@
-import './custom-button.scss';
 import React from 'react';
 
 const CustomButton = ({ children, ...otherProps }) => {
