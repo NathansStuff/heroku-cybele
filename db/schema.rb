@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_07_112914) do
+ActiveRecord::Schema.define(version: 2021_01_30_074559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,14 +29,20 @@ ActiveRecord::Schema.define(version: 2021_02_07_112914) do
 
   create_table "daily_updates", force: :cascade do |t|
     t.float "weight"
-    t.string "drank_water"
-    t.string "boolean"
+    t.boolean "drank_water"
     t.boolean "ate_food"
     t.string "notes"
     t.bigint "animal_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["animal_id"], name: "index_daily_updates_on_animal_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "daily_updates", "animals"

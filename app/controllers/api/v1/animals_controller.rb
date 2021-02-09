@@ -1,7 +1,7 @@
 module Api
     module V1 
         class AnimalsController < ApplicationController
-            skip_before_action :verify_authenticity_token #
+            skip_before_action :verify_authenticity_token
             def index
                 animals = Animal.all
                 render json: AnimalSerializer.new(animals, options).serialized_json
