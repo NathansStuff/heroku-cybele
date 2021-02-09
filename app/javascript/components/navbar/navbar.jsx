@@ -22,7 +22,11 @@ const NavBar = ({ currentUser }) => {
         style={Styles.navBackground}
       >
         <div className='container'>
-          <a className='navbar-brand' href='#'>
+          <a
+            className='navbar-brand'
+            href='/'
+            onClick={() => history.push('/')}
+          >
             <img
               src={logo}
               width='30'
@@ -70,7 +74,11 @@ const NavBar = ({ currentUser }) => {
                   <li className='nav-item pl-2'>
                     <a
                       className='btn rounded-pill shadow-sm text-light bg-info login'
-                      onClick={() => auth.signOut()}
+                      href='/'
+                      onClick={() => {
+                        auth.signOut();
+                        history.push('/');
+                      }}
                     >
                       Logout
                     </a>

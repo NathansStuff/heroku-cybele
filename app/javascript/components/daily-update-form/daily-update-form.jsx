@@ -9,6 +9,7 @@ const DailyUpdateForm = props => {
     <div className='daily-wrapper'>
       <div>
         <h3>New Update for {}</h3>
+        <br></br>
       </div>
       <form onSubmit={props.handleSubmit}>
         <div className='daily-field'>
@@ -20,28 +21,30 @@ const DailyUpdateForm = props => {
             onChange={props.handleChange}
             value={props.daily_update.weight}
           ></input>
+          <br></br>
         </div>
         <div className='daily-field'>
-          <input
+        <label>Ate Food</label>
+          <input className = 'checkbox'
             type='checkbox'
             name='ate_food'
             onChange={props.handleChange}
             value={props.daily_update.ate_food}
             id='ate_food'
           ></input>
-          <label>Ate Food</label>
         </div>
         <div className='daily-field'>
-          <input
+        <label>Drank Water</label>
+          <input className = 'checkbox'
             type='checkbox'
             name='drank_water'
             onChange={props.handleChange}
             value={props.daily_update.drank_water}
             id='drank_water'
           ></input>
-          <label>Drank Water</label>
         </div>
         <div className='daily-field'>
+          <br></br>
           <label>Notes</label>
           <textarea
             id='update-notes'
@@ -53,7 +56,7 @@ const DailyUpdateForm = props => {
           ></textarea>
         </div>
         <div>
-          <button type='submit' id='update-submit'>Submit</button>
+          <button className ="daily-field" type='submit' id='update-submit'>Submit</button>
         </div>
       </form>
     </div>

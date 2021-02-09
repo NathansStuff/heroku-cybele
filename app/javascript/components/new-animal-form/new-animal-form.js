@@ -12,7 +12,7 @@ const NewAnimalForm = props => {
           <div className='new-animal-title'>
             <div></div>
             <h3>New Animal</h3>
-            <button onClick={props.handleClose}>X</button>
+            <button className='closeButton' onClick={props.handleClose}>X</button>
           </div>
           <form onSubmit={props.handleSubmit}>
             <div className='new-animal-field'>

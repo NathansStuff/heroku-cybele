@@ -7,6 +7,7 @@ import SignInAndSignUp from '../pages/sign-in-and-sign-up/sign-in-and-sign-up';
 import { auth, createUserProfileDocument } from '../firebase/firebase';
 import NavBar from '../components/navbar/navbar';
 import { useHistory } from 'react-router-dom';
+import Footer from '../components/footer/footer';
 
 export default class App extends Component {
   constructor() {
@@ -87,6 +88,7 @@ export default class App extends Component {
               )}
             </Switch>
           </BrowserRouter>
+          <Footer />
         </Fragment>
       </div>
     );

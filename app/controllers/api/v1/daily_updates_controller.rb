@@ -1,7 +1,7 @@
 module Api
     module V1 
         class DailyUpdatesController < ApplicationController
-            # skip_before_action :verify_authenticity_token
+            skip_before_action :verify_authenticity_token
             def create
                 daily_update = animal.daily_updates.new(daily_updates_params)
                 if daily_update.save 

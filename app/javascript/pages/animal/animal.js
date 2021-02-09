@@ -5,12 +5,9 @@ import DailyUpdateForm from '../../components/daily-update-form/daily-update-for
 import DailyHistory from '../../components/daily-history/daily-history';
 import { useHistory } from 'react-router-dom';
 import EditAnimalForm from '../../components/edit-animal-form/edit-animal-form';
-import config from '../../aws/config';
-import S3FileUpload from 'react-s3';
-require('dotenv').config()
-
 
 const Animal = props => {
+  let SERVER_KEY;
   // ================================================================================================
   // EDIT ANIMAL
   // ================================================================================================
@@ -35,7 +32,7 @@ const Animal = props => {
     e.preventDefault();
     const file = e.currentTarget.files[0];
     setImage(file);
-    const filename = file.name.split(/(\\|\/)/g).pop().replace(' ', '+'); // formats the filename the same way aws does
+    const filename = file.name.split(/(\\|\/)/g).pop(); // removes /\ from file name
     setEditAnimalForm(Object.assign({}, editAnimalForm, { photo: filename }));
   };
 
@@ -44,21 +41,12 @@ const Animal = props => {
     e.preventDefault();
 
     if (image) {
-      // aws settings
-      S3FileUpload.uploadFile(image, config)
-        .then(() => {
-          submitEditAnimalForm(); // submit the form to backend after creating aws image
-        })
-        .catch(err => {
-          console.log(err);
-        });
     } else {
       submitEditAnimalForm(); // submit the form to backend without doing aws stuff if there is no image
     }
   };
 
   const submitEditAnimalForm = () => {
-    console.log('editing');
     const id = props.match.params.id;
     editAnimalForm.microchip_number === ''
       ? setEditAnimalForm({ microchip: false })
@@ -180,7 +168,6 @@ const Animal = props => {
     const id = props.match.params.id;
     const url = `/api/v1/animals/${id}`;
     setId(id);
-    console.log(process.env.BUCKET)
 
     axios
       .get(url)
@@ -211,20 +198,23 @@ const Animal = props => {
             handleFile={handleFile}
           />
           <div className='show-top'>
-            <DisplayCard
-              attributes={animal}
-              handleDestroy={handleAnimalDestroy}
-              id={id}
-              edit={handleEditAnimalOpen}
-            />
-            <DailyUpdateForm
-              handleChange={handleChange}
-              handleSubmit={handleSubmit}
-              attributes={animal}
-              daily_update={daily_update}
-            />
+            <div className='show-left'>
+              <DisplayCard
+                attributes={animal}
+                handleDestroy={handleAnimalDestroy}
+                id={id}
+                edit={handleEditAnimalOpen}
+              />
+            </div>
+            <div className='show-right'>
+              <DailyUpdateForm
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                attributes={animal}
+                daily_update={daily_update}
+              />
+            </div>
           </div>
-
           <div className='show-bot'>
             <DailyHistory
               attributes={daily_updates}
