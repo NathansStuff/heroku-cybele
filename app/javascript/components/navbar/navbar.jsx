@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import './navbar.css';
+import './navbar.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import logo from '../../../assets/images/logo.svg';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { Modal } from 'react';
+import { auth } from '../../firebase/firebase';
 
 const Styles = {
   navBackground: {
@@ -13,12 +14,7 @@ const Styles = {
   },
 };
 
-const NavBar = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
-  const openPopup = () => {
-    setShowPopup(prev => !prev);
-  };
+const NavBar = ({ currentUser }) => {
   return (
     <React.Fragment>
       <nav
@@ -65,38 +61,24 @@ const NavBar = () => {
                   Contact
                 </a>
               </li>
-              <li className='nav-item pl-5 ml-2 '>
-                <a
-                  className='btn rounded-pill shadow-sm text-light bg-info login'
-                  href='/login'
-                >
-                  Login
-                </a>
-              </li>
-              <li className='nav-item pl-2'>
-                <a
-                  className='btn rounded-pill shadow-sm text-light signup'
-                  href='/signup'
-                >
-                  Signup
-                </a>
-              </li>
-              <li className='nav-item pl-2'>
-                <a
-                  className='btn rounded-pill shadow-sm text-light bg-info login'
-                  onClick={openPopup}
-                >
-                  Login
-                </a>
-              </li>
-              <li className='nav-item pl-2'>
-                <a
-                  className='btn rounded-pill shadow-sm text-light signup'
-                  onClick={openPopup}
-                >
-                  Signup
-                </a>
-              </li>
+              {currentUser ? (
+                <li className='nav-item pl-2'>
+                  <a
+                    className='btn rounded-pill shadow-sm text-light bg-info login'
+                    onClick={() => auth.signOut()}
+                  >
+                    Logout
+                  </a>
+                </li>
+              ) : (
+                <li className='nav-item pl-2'>
+                  <a
+                    className='btn rounded-pill shadow-sm text-light bg-info login'
+                  >
+                    Login
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>
