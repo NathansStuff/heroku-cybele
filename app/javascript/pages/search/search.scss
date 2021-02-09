@@ -1,0 +1,45 @@
+.search-wrapper {
+    margin: 20px;
+    border-style: solid;
+    display: flex;
+    z-index: 0;
+}
+
+.left-panel {
+    width: 30%;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+.left-panel-overview {
+    img {
+        width: 50%;
+        margin-left: 25%;
+    }
+    h3 {
+        text-align: center;
+    }
+}
+.right-panel{
+    width: 70%;
+    border-style: solid;
+    margin: 10px;
+}
+
+.right-panel-header,
+.right-panel-body {
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+.right-panel-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-panel-header {
+    display: flex;
+    justify-content: space-between;
+}

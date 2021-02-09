@@ -1,0 +1,16 @@
+.search-card {
+    border-style: solid;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    p {
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.search-card:hover {
+    cursor: pointer;
+}

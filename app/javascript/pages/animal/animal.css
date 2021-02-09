@@ -1,0 +1,30 @@
+.show-top,
+.show-details,
+.show-update,
+.show-form,
+.show-bot {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    margin: 10px 20px;
+}
+
+.show-details {
+    max-width: 40%;
+}
+
+.displayCard {
+    width: 50%;
+    border-style: solid;
+    margin: 15px 20px;
+}
+
+.daily-update-form {
+    width: 50%;
+    border-style: solid;
+    margin: 15px 20px;
+}
+
+.show-form {
+    width: 60%
+}
