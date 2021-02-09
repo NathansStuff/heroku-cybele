@@ -8,7 +8,7 @@ import NewAnimalForm from '../../components/new-animal-form/new-animal-form';
 import { useHistory } from 'react-router-dom';
 import S3FileUpload from 'react-s3';
 import config from '../../aws/config';
-import background from 'images/aboutbackground.jpg';
+import background from '../../../assets/images/aboutbackground.jpg';
 
 const SearchPage = ({ currentUser }) => {
   let history = useHistory(); // for browser navigation
