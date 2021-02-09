@@ -52,8 +52,18 @@ export default class App extends Component {
                 <HomePage />
               </Route>
               <Route exact path='/animal/:id' component={Animal} />
-              <Route exact path='/search' component={SearchPage} />
-              <Route exact path='/signin' component={SignInAndSignUp} />
+              <Route
+                exact
+                path='/search'
+                component={SearchPage}
+                currentUser={this.state.currentUser}
+              />
+              <Route
+                exact
+                path='/signin'
+                component={SignInAndSignUp}
+                currentUser={this.state.currentUser}
+              />
             </Switch>
           </BrowserRouter>
         </Fragment>

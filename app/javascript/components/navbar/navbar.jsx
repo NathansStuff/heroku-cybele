@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import logo from 'images/logo.svg';
 import { auth } from '../../firebase/firebase';
-import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
 const Styles = {
@@ -16,10 +15,6 @@ const Styles = {
 const NavBar = ({ currentUser }) => {
   let history = useHistory();
 
-  const HomeLink = e => {
-    e.preventDefault();
-    history.push('/');
-  };
   return (
     <React.Fragment>
       <nav
@@ -59,25 +54,28 @@ const NavBar = ({ currentUser }) => {
                   Home
                 </a>
               </li>
-              <li className='nav-item pl-2'>
-                <a
-                  className='nav-link'
-                  href='/search'
-                  onClick={() => history.push('/search')}
-                >
-                  Animals
-                </a>
-              </li>
 
               {currentUser ? (
-                <li className='nav-item pl-2'>
-                  <a
-                    className='btn rounded-pill shadow-sm text-light bg-info login'
-                    onClick={() => auth.signOut()}
-                  >
-                    Logout
-                  </a>
-                </li>
+                <Fragment>
+                  <li className='nav-item pl-2'>
+                    <a
+                      className='nav-link'
+                      href='/search'
+                      onClick={() => history.push('/search')}
+                    >
+                      Animals
+                    </a>
+                  </li>
+
+                  <li className='nav-item pl-2'>
+                    <a
+                      className='btn rounded-pill shadow-sm text-light bg-info login'
+                      onClick={() => auth.signOut()}
+                    >
+                      Logout
+                    </a>
+                  </li>
+                </Fragment>
               ) : (
                 <li className='nav-item pl-2'>
                   <a

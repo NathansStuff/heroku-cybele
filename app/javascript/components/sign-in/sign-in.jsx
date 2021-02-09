@@ -3,6 +3,7 @@ import FormInput from '../form-input/form-input';
 import { signInWithGoogle } from '../../firebase/firebase';
 import CustomButton from '../../components/custom-button/custom-button';
 import { auth } from '../../firebase/firebase';
+import { useHistory } from 'react-router-dom';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -10,8 +11,23 @@ class SignIn extends React.Component {
     this.state = {
       email: '',
       password: '',
+      currentUser: props.currentUser,
     };
   }
+
+  redirectLoggedInUser() {
+    let history = useHistory();
+    history.push('/search')
+  }
+
+  componentDidMount() {
+    console.log(this.state.currentUser);
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.currentUser);
+  }
+
 
   handleSubmit = async event => {
     event.preventDefault();
