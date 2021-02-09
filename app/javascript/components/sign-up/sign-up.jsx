@@ -51,10 +51,12 @@ class SignUp extends React.Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
-      <div className='sign-up'>
-        <h2 className='title'>I do not have an account</h2>
-        <span>Sign up with your email and password</span>
-        <form className='sign-up-form' onSubmit={this.handleSubmit}>
+      <div className="container-fluid mx-auto">
+      <div className='card'>
+        <h2 className='card-title mb-4 mt-1'>I do not have an account</h2>
+        <span className='form-text'>Sign up with your email and password</span>
+        <form className='card-body' onSubmit={this.handleSubmit}>
+          <div className='form-group'>
           <FormInput
             type='text'
             name='displayName'
@@ -62,13 +64,16 @@ class SignUp extends React.Component {
             onChange={this.handleChange}
             label='Display Name'
             required
+            className='form-control'
           ></FormInput>
+          
           <FormInput
             type='email'
             name='email'
             value={email}
             onChange={this.handleChange}
             label='Email'
+            className='form-control'
             required
           ></FormInput>
           <FormInput
@@ -77,6 +82,7 @@ class SignUp extends React.Component {
             value={password}
             onChange={this.handleChange}
             label='password'
+            className='form-control'
             required
           ></FormInput>
           <FormInput
@@ -85,10 +91,13 @@ class SignUp extends React.Component {
             value={confirmPassword}
             onChange={this.handleChange}
             label='Confirm Password'
+            className='form-control'
             required
           ></FormInput>
-          <CustomButton type='submit'>Sign Up</CustomButton>
+          </div>
+          <CustomButton type='submit' className='btn btn-primary'>Sign Up</CustomButton>
         </form>
+      </div>
       </div>
     );
   }

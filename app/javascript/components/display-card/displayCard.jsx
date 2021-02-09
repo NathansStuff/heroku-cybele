@@ -21,7 +21,9 @@ const DisplayCard = props => {
   const data = getData(props);
   console.log(props);
   return (
-    <div className='displayCard'>
+   <main> 
+    <div className='container w-100 h-100 mt-4'>
+    <div className='card w-100 mt-3 p-3'>
       <div className='display-card-image'>
         <img src={data.image} alt={`image of ${data.name}`} />
       </div>
@@ -70,12 +72,12 @@ const DisplayCard = props => {
         <div className='display-card-buttons'>
           <div>
             <p>
-              <button onClick={props.edit}>Edit</button>
+              <button className="btn btn-outline-info text-info" onClick={props.edit}>Edit</button>
             </p>
           </div>
           <div>
             <p>
-              <button onClick={props.handleDestroy.bind(this, props.id)}>
+              <button className="btn btn-outline-danger text-danger" onClick={props.handleDestroy.bind(this, props.id)}>
                 Delete
               </button>
             </p>
@@ -83,6 +85,8 @@ const DisplayCard = props => {
         </div>
       </div>
     </div>
+    </div>
+  </main> 
   );
 };
 

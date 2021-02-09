@@ -51,7 +51,7 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className='container-fluid mx-auto'>
       <div className="card">
         <article className="card-body">
           <a href="" className="float-right btn btn-outline-primary">Sign up</a>
@@ -65,7 +65,7 @@ class SignIn extends React.Component {
                   value={this.state.email}
                   required
                   type='email'
-                  placeHolder='email'
+                  placeholder='email'
                   onChange={this.handleChange}
                 />
               </div>
@@ -76,12 +76,12 @@ class SignIn extends React.Component {
                   value={this.state.password}
                   required
                   type='password'
-                  placeHolder='password'
+                  placeholder='password'
                   onChange={this.handleChange}
                 />
                 </div>
                 <div className="form-group">
-                <CustomButton type='submit' value='Submit Form' className='btn sm btn-primary btn-block'> Submit </CustomButton>
+                <CustomButton type='submit' value='Submit Form' className='btn sm btn-primary btn-block text-faded'> Submit </CustomButton>
                 <CustomButton className='btn btn-block btn-outline-primary'onClick={signInWithGoogle}>
                   {' '}
                   Sign in with Google{' '}

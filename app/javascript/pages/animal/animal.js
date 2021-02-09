@@ -169,7 +169,8 @@ const Animal = props => {
   // DISPLAY
   // ================================================================================================
   return (
-    <div>
+    <div className='container-fluid mt-5'>
+      <div className="row bg-white m-5 p-2">
       {loaded && (
         <Fragment>
           <EditAnimalForm
@@ -179,32 +180,34 @@ const Animal = props => {
             handleSubmit={handleEditAnimalFormSubmit}
             animal={editAnimalForm}
           />
-          <div className='show-top'>
-            <div className='show-left'>
-              <DisplayCard
-                attributes={animal}
-                handleDestroy={handleAnimalDestroy}
-                id={id}
-                edit={handleEditAnimalOpen}
-              />
-            </div>
-            <div className='show-right'>
-              <DailyUpdateForm
-                handleChange={handleChange}
-                handleSubmit={handleSubmit}
-                attributes={animal}
-                daily_update={daily_update}
-              />
-            </div>
+          <div className = 'show-top col'>
+          <div className='show-left col'>
+            <DisplayCard
+              attributes={animal}
+              handleDestroy={handleAnimalDestroy}
+              id={id}
+              edit={handleEditAnimalOpen}
+            />
           </div>
-          <div className='show-bot'>
+          <div className='show-right col'>
+            <DailyUpdateForm
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              attributes={animal}
+              daily_update={daily_update}
+            />
+          </div>
+          </div>
+          <div className='show-bot col'>
             <DailyHistory
               attributes={daily_updates}
               handleDestroy={handleDestroy}
             />
           </div>
+          
         </Fragment>
       )}
+     </div> 
     </div>
   );
 };
