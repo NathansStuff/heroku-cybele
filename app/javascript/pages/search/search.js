@@ -20,7 +20,9 @@ const SearchPage = ({ displayName, photoUrl, email }) => {
       .then(resp => {
         setAnimals(resp.data.data);
         console.log(photoUrl);
-        console.log('************************************************************************************************')
+        console.log(
+          '************************************************************************************************'
+        );
       })
       .catch(resp => console.log(resp), [animals.length]);
   }, [displayName]);
@@ -67,35 +69,9 @@ const SearchPage = ({ displayName, photoUrl, email }) => {
     console.log(newAnimal);
   };
 
-  // set the file to uploaded file
-  const [image, setImage] = useState(null);
-  const handleFile = e => {
-    e.preventDefault();
-    const file = e.currentTarget.files[0];
-    setImage(file);
-    const filename = file.name.split(/(\\|\/)/g).pop(); // removes /\ from file name
-    setNewAnimal(Object.assign({}, newAnimal, { photo: filename }));
-  };
-
   // posts data to api backend
   const handleSubmit = async e => {
     e.preventDefault();
-
-    if (image) {
-      await S3FileUpload.uploadFile(image, config)
-        .then(() => {
-          submitNewAnimal(); // submit the form to backend after creating aws image
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    } else {
-      submitNewAnimal(); // submit the form to backend without doing aws stuff if there is no image
-    }
-  };
-
-  // post the new animal form to the backend
-  const submitNewAnimal = () => {
     axios
       .post('/api/v1/animals', { ...newAnimal })
       .then(resp => {
@@ -177,7 +153,6 @@ const SearchPage = ({ displayName, photoUrl, email }) => {
               handleClose={handleClose}
               handleChange={handleChange}
               handleSubmit={handleSubmit}
-              handleFile={handleFile}
             />
             <div className='row ml-3 container-fluid row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 text-white'>
               {list}

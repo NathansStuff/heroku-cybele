@@ -63,9 +63,6 @@ const EditAnimalForm = props => {
                 onChange={props.handleChange}
               ></textarea>
             </div>
-            <div className='new-animal-field'>
-            <input type='file' name='photo' onChange={props.handleFile} />
-          </div>
             <div>
               <button type='submit'>Submit</button>
             </div>

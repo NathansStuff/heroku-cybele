@@ -61,9 +61,6 @@ const NewAnimalForm = props => {
                 onChange={props.handleChange}
               ></textarea>
             </div>
-            <div className='new-animal-form'>
-              <input type='file' name='photo' onChange={props.handleFile} />
-            </div>
             <div>
               <button type='submit' id='new-animal-submit'>
                 Submit

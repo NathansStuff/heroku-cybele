@@ -26,27 +26,9 @@ const Animal = props => {
     );
   };
 
-  // set the file to uploaded file
-  const [image, setImage] = useState(null);
-  const handleFile = e => {
-    e.preventDefault();
-    const file = e.currentTarget.files[0];
-    setImage(file);
-    const filename = file.name.split(/(\\|\/)/g).pop(); // removes /\ from file name
-    setEditAnimalForm(Object.assign({}, editAnimalForm, { photo: filename }));
-  };
-
   // posts data to api backend
   const handleEditAnimalFormSubmit = e => {
     e.preventDefault();
-
-    if (image) {
-    } else {
-      submitEditAnimalForm(); // submit the form to backend without doing aws stuff if there is no image
-    }
-  };
-
-  const submitEditAnimalForm = () => {
     const id = props.match.params.id;
     editAnimalForm.microchip_number === ''
       ? setEditAnimalForm({ microchip: false })
@@ -59,8 +41,9 @@ const Animal = props => {
       .then(data => {
         history.push(`/animal/${id}`);
       })
-      .catch(data => console.log('Error', data));
+      .catch(data => console.log('Error', data));    
   };
+
 
   const handleEditAnimalClose = e => {
     e.preventDefault();
@@ -195,7 +178,6 @@ const Animal = props => {
             handleChange={handleEditAnimalFormChange}
             handleSubmit={handleEditAnimalFormSubmit}
             animal={editAnimalForm}
-            handleFile={handleFile}
           />
           <div className='show-top'>
             <div className='show-left'>
