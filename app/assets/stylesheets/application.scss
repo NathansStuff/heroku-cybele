@@ -9,519 +9,519 @@
 // ================================================================================================
   // ABOUT
     // ================================================================================================
-// @import 'search.scss';
 
-.content{
-  position: relative;
-}
-// ================================================================================================
-// CONTACT
-// ================================================================================================
 
-body {
-  height: 100vh;
-  width: 100vw;
-  background-color: #111111 !important;
-}
-.contact-form{
-  background: #151515;
-  height: 60vh;
-  margin-bottom: 5%;
-  margin-top: 30%;
-  width: 70%;
-}
-.contact-form .form-control{
-  border-radius:1rem;
-}
-.contact-image{
-  text-align: center;
-}
-.contact-image img{
-  border-radius: 6rem;
-  width: 11%;
-  margin-top: -3%;
-  transform: rotate(29deg);
-}
-.contact-form form{
-  padding: 14%;
-}
-.contact-form form .row{
-  margin-bottom: -7%;
-}
-.contact-form h3{
-  margin-bottom: 8%;
-  margin-top: -10%;
-  text-align: center;
-  color: #fff;
-}
-.contact-form .btnContact {
-  width: 50%;
-  border: none;
-  border-radius: 1rem;
-  padding: 1.5%;
-  background: #dc3545;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-}
-.btnContactSubmit
-{
-  width: 50%;
-  border-radius: 1rem;
-  padding: 1.5%;
-  color: #fff;
-  background-color: #0062cc;
-  border: none;
-  cursor: pointer;
-}
-// ================================================================================================
-// DAILY UPDATE
-// ================================================================================================
-.daily-wrapper {
-  display: flex;
-  flex-direction: column;
-  border-style: solid;
-  width: 100%;
-  margin: 15px;
-  padding: 10px;
-}
-// ================================================================================================
-// DISPLAY CARD
-// ================================================================================================
-.display-card {
-  min-width: 100%;
-  padding: 10px 0;
-}
-.display-card-image img {
-  max-width: 150px;
-  max-height: 150px;
-  margin: 5px auto;
-  text-align: center;
-}
-
-.display-card-img {
-  width: 100%;    
-}
-
-.display-card-info {
-  margin-bottom: 10px;
-  div {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 10px;
-  height: 35px;
-  }
-}
-// ================================================================================================
-// FOOTER
-// ================================================================================================
-.copyright {
-  padding: 28px 0;
-  margin-top: 55px;
-  background-color: #202020; }
-  .copyright span,
-  .copyright a {
-    color: #878787;
-    -webkit-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear; }
-  .copyright a:hover {
-    color:#007bff; }
-
-.copyright-menu ul {
-  text-align: right;
-  margin: 0; }
-
-.copyright-menu li {
-  display: inline-block;
-  padding-left: 20px; }
-
-.back-to-top {
-  position: relative;
-  z-index: 2; 
-color: aqua;
-display: inline-block;}
+    .content{
+      position: relative;
+    }
     // ================================================================================================
-// HERO 
-// ================================================================================================
-.signup{
-  background-color: #6f42c1;
-}
-// ================================================================================================
-// NAVBAR
-// ================================================================================================
-.login{
-  background-color: #6f42c1;
-}
+    // CONTACT
+    // ================================================================================================
+    
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-color: #111111 !important;
+    }
+    .contact-form{
+      background: #151515;
+      height: 60vh;
+      margin-bottom: 5%;
+      margin-top: 30%;
+      width: 70%;
+    }
+    .contact-form .form-control{
+      border-radius:1rem;
+    }
+    .contact-image{
+      text-align: center;
+    }
+    .contact-image img{
+      border-radius: 6rem;
+      width: 11%;
+      margin-top: -3%;
+      transform: rotate(29deg);
+    }
+    .contact-form form{
+      padding: 14%;
+    }
+    .contact-form form .row{
+      margin-bottom: -7%;
+    }
+    .contact-form h3{
+      margin-bottom: 8%;
+      margin-top: -10%;
+      text-align: center;
+      color: #fff;
+    }
+    .contact-form .btnContact {
+      width: 50%;
+      border: none;
+      border-radius: 1rem;
+      padding: 1.5%;
+      background: #dc3545;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+    }
+    .btnContactSubmit
+    {
+      width: 50%;
+      border-radius: 1rem;
+      padding: 1.5%;
+      color: #fff;
+      background-color: #0062cc;
+      border: none;
+      cursor: pointer;
+    }
+    // ================================================================================================
+    // DAILY UPDATE
+    // ================================================================================================
+    .daily-wrapper {
+      display: flex;
+      flex-direction: column;
+      border-style: solid;
+      width: 100%;
+      margin: 15px;
+      padding: 10px;
+    }
+    // ================================================================================================
+    // DISPLAY CARD
+    // ================================================================================================
+    .display-card {
+      min-width: 100%;
+      padding: 10px 0;
+    }
+    .display-card-image img {
+      max-width: 150px;
+      max-height: 150px;
+      margin: 5px auto;
+      text-align: center;
+    }
+    
+    .display-card-img {
+      width: 100%;    
+    }
+    
+    .display-card-info {
+      margin-bottom: 10px;
+      div {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 10px;
+      height: 35px;
+      }
+    }
+    // ================================================================================================
+    // FOOTER
+    // ================================================================================================
+    .copyright {
+      padding: 28px 0;
+      margin-top: 55px;
+      background-color: #202020; }
+      .copyright span,
+      .copyright a {
+        color: #878787;
+        -webkit-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+      .copyright a:hover {
+        color:#007bff; }
+    
+    .copyright-menu ul {
+      text-align: right;
+      margin: 0; }
+    
+    .copyright-menu li {
+      display: inline-block;
+      padding-left: 20px; }
+    
+    .back-to-top {
+      position: relative;
+      z-index: 2; 
+    color: aqua;
+    display: inline-block;}
+        // ================================================================================================
+    // HERO 
+    // ================================================================================================
+    .signup{
+      background-color: #6f42c1;
+    }
+    // ================================================================================================
+    // NAVBAR
+    // ================================================================================================
+    .login{
+      background-color: #6f42c1;
+    }
+    
+    .signup{
+      background-color: #6f42c1;
+    }
+    // ================================================================================================
+    // NEW ANIMAL FORM
+    // ================================================================================================
+    .new-animal-wrapper {
+      z-index: 1;
+    }
+    
+    .new-animal-form {
+      border-style: solid;
+      margin: 20px;
+      padding: 10px;
+      display: flex;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      max-width: 600px;
+    
+    }
+    
+    .new-animal-title {
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .new-animal-field {
+      margin: 10px;
+      
+    }
+    // ================================================================================================
+    // SEARCH CARD
+    // ================================================================================================
+    .search-card {
+      border-style: solid;
+      margin: 5px;
+      padding: 5px;
+      width: 200px;
+      p {
+          text-align: center;
+      }
+      img {
+          max-width: 100%;
+      }
+    }
+    
+    .search-card:hover {
+      cursor: pointer;
+    }
+    // ================================================================================================
+    // CUSTOM BUTTON
+    // ================================================================================================
+    .custom-button {
+      min-width: 165px;
+      width: auto;
+      height: 50px;
+      letter-spacing: 0.5px;
+      line-height: 50px;
+      padding: 0 35px 0 35px;
+      font-size: 15px;
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'Open Sans Condensed';
+      font-weight: bolder;
+      border: none;
+      cursor: pointer;
+    
+      &:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+      }
+    }
+    // ================================================================================================
+    // SIGN UP
+    // ================================================================================================
+    .sign-up {
+      display: flex;
+      flex-direction: column;
+      width: 380px;
+    
+      .title {
+          margin: 10px 0;
+      }
+    }
+    // ================================================================================================
+    // SIGN IN
+    // ================================================================================================
+    .sign-in {
+      width: 30vw;
+      display: flex;
+      flex-direction: column;   
+      .title {
+       margin-top: 10px;   
+      }
+     }
+    // ================================================================================================
+    // FORM INPUT
+    // ================================================================================================
+    $sub-color: grey;
+    $main-color: black;
+    
+    @mixin shrinkLabel {
+      top: -14px;
+      font-size: 12px;
+      color: $main-color;
+    }
+    
+    .group {
+      position: relative;
+      margin: 45px 0;
+    
+      .form-input {
+        background: none;
+        background-color: white;
+        color: $sub-color;
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $sub-color;
+        margin: 25px 0;
+    
+        &:focus {
+          outline: none;
+        }
+    
+        &:focus ~ .form-input-label {
+          @include shrinkLabel();
+        }
+      }
+    
+      input[type='password'] {
+        letter-spacing: 0.3em;
+      }
+    
+      .form-input-label {
+        color: $sub-color;
+        font-size: 16px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 300ms ease all;
+    
+        &.shrink {
+          @include shrinkLabel();
+        }
+      }
+    }
+    
+    // ================================================================================================
+    // ================================================================================================
+    // ================================================================================================
+      // PAGES
+      // ================================================================================================
+    // ================================================================================================
+    // ================================================================================================
+    
+      // ================================================================================================
+      // ANIMAL
+      // ================================================================================================
+      .show-top,
+      .show-details,
+      .show-update,
+      .show-form,
+      .show-bot {
+          display: flex;
+          flex-direction: row;
+          border-style: solid;
+          margin: 10px 20px;
+      }
+      
+      .show-details {
+          max-width: 40%;
+      }
+      
+      .displayCard {
+          width: 50%;
+          border-style: solid;
+          margin: 15px 20px;
+      }
+      
+      .daily-update-form {
+          width: 50%;
+          border-style: solid;
+          margin: 15px 20px;
+      }
+      
+      .show-form {
+          width: 60%
+      }
+    // ================================================================================================
+    // SEARCH
+    // ================================================================================================
+    .search-wrapper{
 
-.signup{
-  background-color: #6f42c1;
-}
-// ================================================================================================
-// NEW ANIMAL FORM
-// ================================================================================================
-.new-animal-wrapper {
-  z-index: 1;
-}
-
-.new-animal-form {
-  border-style: solid;
-  margin: 20px;
-  padding: 10px;
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  max-width: 600px;
-
-}
-
-.new-animal-title {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.new-animal-field {
-  margin: 10px;
+      background-image: url("../../../assets/images/aboutbackground.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
   
-}
-// ================================================================================================
-// SEARCH CARD
-// ================================================================================================
-.search-card {
-  border-style: solid;
-  margin: 5px;
-  padding: 5px;
-  width: 200px;
-  p {
+  
+  .aboutme{
+      background: #4859680e;
+      
+      
+  }
+  .emp-profile{
+      
+      padding: 3%;
+      margin-top: 10%;
+      margin-bottom: 3%;
+      box-shadow: 0 0 1rem 0 rgb(110, 119, 172); 
+      border-radius: 5px;
+      background-color: rgba(240, 240, 240, 0.048);
+      
+      backdrop-filter: blur(5px);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+  }
+  
+  .profile-img{
       text-align: center;
   }
-  img {
-      max-width: 100%;
+  .profile-img img{
+      width: 70%;
+      height: 70%;
+      border-radius: 15%;
   }
-}
-
-.search-card:hover {
-  cursor: pointer;
-}
-// ================================================================================================
-// CUSTOM BUTTON
-// ================================================================================================
-.custom-button {
-  min-width: 165px;
-  width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
-  font-weight: bolder;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+  
+  .profile-head h5{
+      color: #fff;
   }
-}
-// ================================================================================================
-// SIGN UP
-// ================================================================================================
-.sign-up {
-  display: flex;
-  flex-direction: column;
-  width: 380px;
-
-  .title {
-      margin: 10px 0;
+  .profile-head h6{
+      color: #0062cc;
   }
-}
-// ================================================================================================
-// SIGN IN
-// ================================================================================================
-.sign-in {
-  width: 30vw;
-  display: flex;
-  flex-direction: column;   
-  .title {
-   margin-top: 10px;   
+  
+  
+  .profile-work{
+      padding: 14%;
+      margin-top: -15%;
   }
- }
-// ================================================================================================
-// FORM INPUT
-// ================================================================================================
-$sub-color: grey;
-$main-color: black;
-
-@mixin shrinkLabel {
-  top: -14px;
-  font-size: 12px;
-  color: $main-color;
-}
-
-.group {
-  position: relative;
-  margin: 45px 0;
-
-  .form-input {
-    background: none;
-    background-color: white;
-    color: $sub-color;
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid $sub-color;
-    margin: 25px 0;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:focus ~ .form-input-label {
-      @include shrinkLabel();
-    }
+  .profile-work p{
+      font-size: 12px;
+      color: #fff;
+      font-weight: 600;
+      margin-top: 10%;
   }
-
-  input[type='password'] {
-    letter-spacing: 0.3em;
+  
+  .profile-work ul{
+      list-style: none;
   }
-
-  .form-input-label {
-    color: $sub-color;
-    font-size: 16px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 300ms ease all;
-
-    &.shrink {
-      @include shrinkLabel();
-    }
+  .profile-tab label{
+      font-weight: 600;
   }
-}
-
-// ================================================================================================
-// ================================================================================================
-// ================================================================================================
-  // PAGES
-  // ================================================================================================
-// ================================================================================================
-// ================================================================================================
-
-  // ================================================================================================
-  // ANIMAL
-  // ================================================================================================
-  .show-top,
-  .show-details,
-  .show-update,
-  .show-form,
-  .show-bot {
+  .profile-tab p{
+      font-weight: 600;
+      color: #0062cc;
+  }
+  
+  // .search-wrapper {
+  //     margin: 180px 100px 20px;
+  //     display: flex;
+  //     justify-content: center;
+  //     z-index: 0;
+  //     opacity: 80%;
+  //     height: 100% ;
+  // }
+  
+  // .left-panel {
+  //     z-index:2;
+  //     background-color: rgb(128, 135, 147);
+  //     width: 20%;
+  //     border-radius: 25px;
+  //     margin-left: 10px;
+  //     margin-top: 10px;
+  //     padding: 10px;
+  // }
+  
+  // .left-panel-overview {
+  //     img {
+  //         width: 50%;
+  //         margin-left: 25%;
+  //         border-radius: 10px;
+  
+  //     }
+  //     h3 {
+  //         text-align: center;
+  //     }
+  // }
+  // .left-panel-writing{
+  //     text-align: center;
+  // }
+  // .right-panel{
+  //     z-index:1;
+  //     background: -webkit-gradient(linear, left top, left bottom, from(rgba(128, 135, 147, 0.902)), to(rgba(222, 220, 222, 0.807)), color-stop(.99,#fffffff2)); 
+  //     width: 80%;
+  //     border-radius: 20px;
+  //     margin-right: 10px;
+  //     margin-top:10px;
+  //     margin-left: -50px;
+  // }
+  
+  
+  // #Addnew{
+      
+  //     border-radius: 15px;
+  //     background-color: lightgray;
+  //     width: 10em;
+  //     text-align: space-around;
+  // }
+  // #SearchBar{
+  //     border-radius: 5px;
+  // }
+  
+  // .right-panel-header {
+  //     padding:10px;
+  //     margin-top: 10px;
+  //     margin-right: 10em;
+  //     margin-left: 10em;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     border-bottom: 3px solid white;
+  // }
+  
+  // .right-panel-body {
+  //     margin-left: 7em;
+  //     margin-right: 7em;
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     overflow-y: scroll;
+  //     height:85%;
+  //     padding-top:20px;
+  
+  // }
+  
+  // .search-card{
+  //     img{
+  //         height:30%;
+  //         width: 70%;
+  //     }
+  //     min-width:25%;
+  //     min-height: 50%;
+  //     display:flex;
+  //     flex-direction:column;
+  //     align-items: center;
+  //     color: white;
+  // }
+  
+ 
+    // ================================================================================================
+    // SIGN IN AND SIGN UP
+    // ================================================================================================
+    .sign-in-and-sign-up {
+      width: 850px;
       display: flex;
-      flex-direction: row;
-      border-style: solid;
-      margin: 10px 20px;
-  }
-  
-  .show-details {
-      max-width: 40%;
-  }
-  
-  .displayCard {
-      width: 50%;
-      border-style: solid;
-      margin: 15px 20px;
-  }
-  
-  .daily-update-form {
-      width: 50%;
-      border-style: solid;
-      margin: 15px 20px;
-  }
-  
-  .show-form {
-      width: 60%
-  }
-// ================================================================================================
-// SEARCH
-// ================================================================================================
-.search-wrapper{
-
-  background-image: url("../../../assets/images/aboutbackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-.aboutme{
-  background: #4859680e;
-  
-  
-}
-.emp-profile{
-  
-  padding: 3%;
-  margin-top: 10%;
-  margin-bottom: 3%;
-  box-shadow: 0 0 1rem 0 rgb(110, 119, 172); 
-  border-radius: 5px;
-  background-color: rgba(240, 240, 240, 0.048);
-  
-  backdrop-filter: blur(5px);
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.profile-img{
-  text-align: center;
-}
-.profile-img img{
-  width: 70%;
-  height: 70%;
-  border-radius: 15%;
-}
-
-.profile-head h5{
-  color: #fff;
-}
-.profile-head h6{
-  color: #0062cc;
-}
-
-
-.profile-work{
-  padding: 14%;
-  margin-top: -15%;
-}
-.profile-work p{
-  font-size: 12px;
-  color: #fff;
-  font-weight: 600;
-  margin-top: 10%;
-}
-
-.profile-work ul{
-  list-style: none;
-}
-.profile-tab label{
-  font-weight: 600;
-}
-.profile-tab p{
-  font-weight: 600;
-  color: #0062cc;
-}
-
-// .search-wrapper {
-//     margin: 180px 100px 20px;
-//     display: flex;
-//     justify-content: center;
-//     z-index: 0;
-//     opacity: 80%;
-//     height: 100% ;
-// }
-
-// .left-panel {
-//     z-index:2;
-//     background-color: rgb(128, 135, 147);
-//     width: 20%;
-//     border-radius: 25px;
-//     margin-left: 10px;
-//     margin-top: 10px;
-//     padding: 10px;
-// }
-
-// .left-panel-overview {
-//     img {
-//         width: 50%;
-//         margin-left: 25%;
-//         border-radius: 10px;
-
-//     }
-//     h3 {
-//         text-align: center;
-//     }
-// }
-// .left-panel-writing{
-//     text-align: center;
-// }
-// .right-panel{
-//     z-index:1;
-//     background: -webkit-gradient(linear, left top, left bottom, from(rgba(128, 135, 147, 0.902)), to(rgba(222, 220, 222, 0.807)), color-stop(.99,#fffffff2)); 
-//     width: 80%;
-//     border-radius: 20px;
-//     margin-right: 10px;
-//     margin-top:10px;
-//     margin-left: -50px;
-// }
-
-
-// #Addnew{
-  
-//     border-radius: 15px;
-//     background-color: lightgray;
-//     width: 10em;
-//     text-align: space-around;
-// }
-// #SearchBar{
-//     border-radius: 5px;
-// }
-
-// .right-panel-header {
-//     padding:10px;
-//     margin-top: 10px;
-//     margin-right: 10em;
-//     margin-left: 10em;
-//     display: flex;
-//     justify-content: space-between;
-//     border-bottom: 3px solid white;
-// }
-
-// .right-panel-body {
-//     margin-left: 7em;
-//     margin-right: 7em;
-//     display: flex;
-//     flex-wrap: wrap;
-//     align-items: center;
-//     justify-content: space-between;
-//     overflow-y: scroll;
-//     height:85%;
-//     padding-top:20px;
-
-// }
-
-// .search-card{
-//     img{
-//         height:30%;
-//         width: 70%;
-//     }
-//     min-width:25%;
-//     min-height: 50%;
-//     display:flex;
-//     flex-direction:column;
-//     align-items: center;
-//     color: white;
-// }
-
-
-// ================================================================================================
-// SIGN IN AND SIGN UP
-// ================================================================================================
-.sign-in-and-sign-up {
-  width: 850px;
-  display: flex;
-  justify-content: space-between;
-  margin: 30px auto;
-}
-//*= require_self
-//*= require_tree .
+      justify-content: space-between;
+      margin: 30px auto;
+    }
+    //*= require_self
+   //*= require_tree .

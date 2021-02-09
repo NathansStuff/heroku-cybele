@@ -6,13 +6,10 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import SearchCard from '../../components/search-card/search-card';
 import NewAnimalForm from '../../components/new-animal-form/new-animal-form';
 import { useHistory } from 'react-router-dom';
-import S3FileUpload from 'react-s3';
-import config from '../../aws/config';
 import background from '../../../assets/images/aboutbackground.jpg';
 
-const SearchPage = ({ currentUser }) => {
+const SearchPage = ({ displayName, photoUrl, email }) => {
   let history = useHistory(); // for browser navigation
-
   // =================================================================================
   // POPULATE ANIMALS
   // =================================================================================
@@ -22,11 +19,11 @@ const SearchPage = ({ currentUser }) => {
       .get('./api/v1/animals.json')
       .then(resp => {
         setAnimals(resp.data.data);
-        console.log(currentUser);
-        console.log('current user ^^^^');
+        console.log(photoUrl);
+        console.log('************************************************************************************************')
       })
       .catch(resp => console.log(resp), [animals.length]);
-  }, []);
+  }, [displayName]);
 
   // =================================================================================
   // SEARCH BOX
@@ -140,21 +137,22 @@ const SearchPage = ({ currentUser }) => {
         <div className='row'>
           <div className='col-md-4 aboutme rounded'>
             <div className='profile-img  float-start mt-3 '>
-              <img
-                className=' img-fluid'
-                src='https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'
-                alt=''
-              />
-              <h5 className='display-5 mt-3 text-light'>
-                Firstname Lastname
-                {currentUser}
-              </h5>
-              <div className='profile-work text-light'>
-                <p>Bio</p>
-                <p>hofuwhfionweoifpnewoi</p>
-                <p>Contact: </p>
-                <p>Location: </p>
-              </div>
+              {photoUrl ? (
+                <img
+                  className=' img-fluid'
+                  src={photoUrl}
+                  alt='display photo'
+                />
+              ) : (
+                <img
+                  className=' img-fluid'
+                  src='https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'
+                  alt='default display photo'
+                />
+              )}
+
+              <h5 className='display-5 mt-3 text-light'>{displayName}</h5>
+              <div className='profile-work text-light'>{email}</div>
             </div>
           </div>
           <div className='col-md-8'>

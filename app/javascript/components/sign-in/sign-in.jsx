@@ -51,35 +51,49 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div className='sign-in'>
-        <h2>I already have an account</h2>
-        <span>Sign in with your email and password</span>
-        <form onSubmit={this.handleSubmit}>
-          <FormInput
-            name='email'
-            value={this.state.email}
-            required
-            type='email'
-            onChange={this.handleChange}
-          />
-          <label>Email</label>
-          <FormInput
-            name='password'
-            value={this.state.password}
-            required
-            type='password'
-            onChange={this.handleChange}
-          />
-          <label>Password</label>
-          <CustomButton type='submit' value='Submit Form' />
-          <CustomButton onClick={signInWithGoogle}>
-            {' '}
-            Sign in with Google{' '}
-          </CustomButton>
-        </form>
+      <div className='container'>
+      <div className="card">
+        <article className="card-body">
+          <a href="" className="float-right btn btn-outline-primary">Sign up</a>
+          <h4 className="card-title mb-4 mt-1">Sign in</h4>
+          <hr/>  
+          <form  onSubmit={this.handleSubmit}>
+              <div className="form-group">
+                <FormInput
+                className='form-control'
+                  name='email'
+                  value={this.state.email}
+                  required
+                  type='email'
+                  placeHolder='email'
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <FormInput
+                className='form-control'
+                  name='password'
+                  value={this.state.password}
+                  required
+                  type='password'
+                  placeHolder='password'
+                  onChange={this.handleChange}
+                />
+                </div>
+                <div className="form-group">
+                <CustomButton type='submit' value='Submit Form' className='btn sm btn-primary btn-block'> Submit </CustomButton>
+                <CustomButton className='btn btn-block btn-outline-primary'onClick={signInWithGoogle}>
+                  {' '}
+                  Sign in with Google{' '}
+                </CustomButton>
+                </div>
+              </form>   
+      </article>
       </div>
-    );
-  }
-}
+    </div>
 
+    )
+    }}    
 export default SignIn;
+
+    

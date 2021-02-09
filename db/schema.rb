@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_02_07_112914) do
 
   create_table "daily_updates", force: :cascade do |t|
     t.float "weight"
-    t.string "drank_water"
+    t.boolean "drank_water"
     t.string "boolean"
     t.boolean "ate_food"
     t.string "notes"

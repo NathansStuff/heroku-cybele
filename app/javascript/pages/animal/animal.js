@@ -118,7 +118,7 @@ const Animal = props => {
       if (daily_update.drank_water == false) {
         setDailyUpdate(Object.assign({}, daily_update, { drank_water: true }));
       } else {
-        setDailyUpdate(Object.assign({}, daily_update, { drank_water: false }));
+        setDailyUpdate(Object.assign({}, daily_update, { ate_food: false }));
       }
     } else {
       setDailyUpdate(

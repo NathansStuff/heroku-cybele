@@ -20,24 +20,6 @@ const Footer = () => {
                     <div className="col-md-6">
                         <span>Copyright © 2021, All Right Reserved TheCybeleProject</span>
                     </div>
-                    <div className="col-md-6">
-                        <div className="copyright-menu">
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">About</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="#">Signup</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
